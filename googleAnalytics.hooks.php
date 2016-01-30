@@ -15,11 +15,11 @@ class GoogleAnalyticsHooks {
 			return true;
 		}
 
-		if ( count( array_filter( $wgGoogleAnalyticsIgnoreSpecials, function ( $v ) use ( $skin ) {
+		if ( count( array_filter( (array) $wgGoogleAnalyticsIgnoreSpecials, function ( $v ) use ( $skin ) {
 				return $skin->getTitle()->isSpecial( $v );
 			} ) ) > 0
-			|| in_array( $skin->getTitle()->getNamespace(), $wgGoogleAnalyticsIgnoreNsIDs, true )
-			|| in_array( $skin->getTitle()->getPrefixedText(), $wgGoogleAnalyticsIgnorePages, true ) ) {
+			|| in_array( $skin->getTitle()->getNamespace(), (array) $wgGoogleAnalyticsIgnoreNsIDs, true )
+			|| in_array( $skin->getTitle()->getPrefixedText(), (array) $wgGoogleAnalyticsIgnorePages, true ) ) {
 			$text .= "<!-- Web analytics code inclusion is disabled for this page. -->\r\n";
 			return true;
 		}
