@@ -1,0 +1,31 @@
+{
+    "name": "GoogleAnalytics",
+    "version": "3.0.1",
+    "author": [
+        "Tim Laqua"
+    ],
+    "url": "https://www.mediawiki.org/wiki/Extension:Google_Analytics_Integration",
+    "descriptionmsg": "googleanalytics-desc",
+    "license-name": "GPL-2.0+",
+    "AutoloadClasses": {
+        "GoogleAnalyticsHooks": "googleAnalytics.hooks.php"
+    },
+	"Hooks": {
+        "SkinAfterBottomScripts": ["GoogleAnalyticsHooks::onSkinAfterBottomScripts"]
+	},
+    "type": "Analytics extensions",
+    "config": {
+        "GoogleAnalyticsAccount": "",
+        "GoogleAnalyticsAnonymizeIP": true,
+        "GoogleAnalyticsOtherCode": "",
+        "GoogleAnalyticsIgnoreNsIDs": [],
+        "GoogleAnalyticsIgnorePages": [],
+        "GoogleAnalyticsIgnoreSpecials": [
+            "Userlogin",
+            "Userlogout",
+            "Preferences",
+            "ChangePassword"
+        ]
+    },
+	"manifest_version": 1
+}
