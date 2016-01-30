@@ -15,17 +15,6 @@
 	},
     "type": "Analytics extensions",
     "config": {
-        "GoogleAnalyticsAccount": "",
-        "GoogleAnalyticsAnonymizeIP": true,
-        "GoogleAnalyticsOtherCode": "",
-        "GoogleAnalyticsIgnoreNsIDs": [],
-        "GoogleAnalyticsIgnorePages": [],
-        "GoogleAnalyticsIgnoreSpecials": [
-            "Userlogin",
-            "Userlogout",
-            "Preferences",
-            "ChangePassword"
-        ]
     },
 	"manifest_version": 1
 }
